@@ -16,6 +16,8 @@ class CreateArtikelsTable extends Migration
             $table->increments('id');
             $table->integer('id_user');
             $table->string('judul');
+            $table->string('slug');
+            $table->string('sampul');
             $table->text('isi');
             $table->timestamps();
         });
