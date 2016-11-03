@@ -18,4 +18,13 @@ class BlogController extends Controller
     	$data['komentar'] = \App\Komentar::whereIdArtikel($data['artikel']->id)->get();
     	return view('blog.detail')->with($data);
     }
+
+    public function pdf($id){
+    	$data['artikel']=\App\Artikel::whereSlug($id)->first();
+
+    	$pdf =\PDF::loadview('blog.pdf',$data);
+    	return $pdf->download($data['artikel']->judul.".pdf");
+    }
+
+
 }

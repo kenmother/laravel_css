@@ -25,6 +25,7 @@
 				<div class="card-action">
 				<div class="right">Posted by {{\App\User::find($key->id_user)['name']}} at {{$key->created_at}}</div>
 					<a href="{{url($key->slug)}}">Read More</a>
+					<a href="{{url($key->slug.'/pdf')}}">Download</a>
 					</div>
 				</div>
 			</div>

@@ -39,6 +39,7 @@ Route::get('hapuskomentar/{id}','ArtikelController@hapuskomentar');
 
 Route::get('blog','BlogController@index');
 Route::get('{id}','BlogController@detail');
+Route::get('{id}/pdf','BlogController@pdf');
 
 
 
