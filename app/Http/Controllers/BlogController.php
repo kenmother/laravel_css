@@ -9,7 +9,7 @@ use App\Http\Requests;
 class BlogController extends Controller
 {
     public function index(){
-    	$data['artikel'] = \App\artikel::paginate(10);
+    	$data['artikel'] = \App\Artikel::paginate(10);
     	return view('blog.home')->with($data);
     }
 
